@@ -18,14 +18,14 @@ body
 #root
 {
   margin: 0 auto;
-  
-  max-width: 50%;
-  max-height: 50%;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items:flex-end;
+}
+section
+{
+  margin: 0 auto;
 }
 #main-content
 {
@@ -37,5 +37,4 @@ body
 h1
 {
   text-align: center;
-  border: 0 auto;
 }
