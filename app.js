@@ -29,11 +29,16 @@ function handleError(error) {
 btnTranslate.addEventListener("click", () => onTranslate());
 
 function onTranslate() {
-    btnTranslate.disabled = true;
-    translateText.textContent = "translating...";
     var inputText = inputTextArea.value;
-    fetch(generateURL(inputText))
-        .then(response => response.json())
-        .then(json => displayOutput(json))
-        .catch(handleError)
+    if (inputText == "") {
+        alert("enter some text to translate");
+    }
+    else {
+        btnTranslate.disabled = true;
+        translateText.textContent = "translating...";
+        fetch(generateURL(inputText))
+            .then(response => response.json())
+            .then(json => displayOutput(json))
+            .catch(handleError)
+    }
 }
