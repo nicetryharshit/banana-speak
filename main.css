@@ -5,19 +5,32 @@ html
   justify-content: center;
   align-items: center;
 }
+
 body
 {
   margin: 0 auto;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 100%;
+  font-family: apercu_proregular,Helvetica Neue,sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
+
+.background
+{
+  background-image:url(minion-bg.png);
+  opacity:0.1;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  background-repeat: repeat;
+  z-index:-1;
+}
+
 #root
 {
   margin: 0 auto;
+  max-width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,9 +45,58 @@ section
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
+h2
+{
+  text-align: center;
+}
 h1
 {
   text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  resize: none;
+  font-family: apercu_proregular,Helvetica Neue,sans-serif;
+}
+
+button
+{
+  background: #0A75BC;
+  border: solid 2px #0A75BC;
+  border-radius: 50px;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  width: fit-content;
+  height: 35px;
+}
+
+button:disabled
+{
+  background: #0a75bc83;
+  border: solid 2px #0a75bc83;
+}
+
+h3
+{
+  margin: 0;
+  line-height: 1.75em;
+  color: white;
+}
+section
+{
+  margin:0 top;
+  /* margin-top: 2em; */
+  /* margin-bottom: 2em; */
 }
